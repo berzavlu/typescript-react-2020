@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "module": "es6",
+    "target": "es5",
+    "lib": [ // Specify library files to be included in the compilation.
+      "es2015",
+      "es2017",
+      "dom"
+    ],
+    "jsx": "react", // Specify JSX code generation.
+    /* Strict Type-Checking Options: you may not need this but we are pedants */
+    "strict": true, // Enable all strict type-checking options.
+    "strictNullChecks": true, // Enable strict null checks.
+    /* Module Resolution Options */
+    "moduleResolution": "node", // Specify module resolution strategy.
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export. This does not affect code emit, just typechecking.
+    "esModuleInterop": true, // Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports.
+    /* Additional Checks */
+    "noUnusedLocals": true, // Report errors on unused locals.
+    "noUnusedParameters": true, // Report errors on unused parameters.
+    "noImplicitReturns": true, // Report error when not all code paths in function return a value.
+    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statement.
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "outDir": "./dist/",
+    "removeComments": true,
+    "allowJs": true,
+    "baseUrl": "./",
+    "paths": {
+      "components/*": [
+        "src/components/*"
+      ],
+    }
+  },
+  "exclude": [
+    "node_modules/"
+  ]
+}

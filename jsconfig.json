@@ -1,0 +1,11 @@
+// sirve para que el vscode reconozca los paths del module-resolver
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "src/*"
+      ]
+    }
+  }
+}
