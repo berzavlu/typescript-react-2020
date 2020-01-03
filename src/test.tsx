@@ -1,4 +1,5 @@
 import React from 'react'
+import style from './style.module.scss'
 
 type CardProps = {
   title: string
@@ -7,7 +8,7 @@ type CardProps = {
 
 const Count = ({ title, paragraph }: CardProps) => {
   return (
-    <h1>
+    <h1 className={style.errors}>
       {title} - {paragraph} dd
     </h1>
   )
