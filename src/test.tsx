@@ -9,7 +9,7 @@ type CardProps = {
 const Count = ({ title, paragraph }: CardProps) => {
   return (
     <h1 className={style.errors}>
-      {title} - {paragraph} dd
+      {title} - {paragraph} dd4
     </h1>
   )
 }

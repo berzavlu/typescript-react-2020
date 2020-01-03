@@ -10,15 +10,15 @@ const path = require('path')
 const webpack = require('webpack')
 const ENV = require('./env')
 
-const { PORT, NODE_ENV } = ENV[process.env.NODE_ENV]
+const { PORT, NODE_ENV, ASSET_PATH } = ENV[process.env.NODE_ENV]
 const isProd = NODE_ENV === 'production'
 
 module.exports = {
-  entry: ['./src/index.tsx'],
+  entry: ['./src/app.tsx'],
   output: {
     filename: 'static/js/[name].[hash].chunk.js',
     path: path.resolve('./dist'),
-    publicPath: '/',
+    publicPath: ASSET_PATH,
   },
   module: {
     rules: [
@@ -85,7 +85,7 @@ module.exports = {
   resolve: {
     alias: {
       'react-dom': '@hot-loader/react-dom',
-      assets: path.resolve(__dirname, './src/assets'),
+      styles: path.resolve('./src/styles'),
     },
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
